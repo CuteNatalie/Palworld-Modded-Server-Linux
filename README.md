@@ -41,6 +41,9 @@ sudo pacman -S winetricks
 > - Use xquartz if using Mac OS
 > - Use the -X option when using ssh if using linux or using wsl
 
+>[!IMPORTANT]
+> - MAKE SURE THAT WINE IS SET TO A 64 BIT PREFIX OR ELSE NOTHING WILL RUN PROPERLY. To do this, make sure to set WINEARCH to win64 by doing `export WINEARCH=win64`.
+
 # If you have winetricks installed:
 ```bash
 winetricks vcrun2022
