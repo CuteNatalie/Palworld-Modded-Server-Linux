@@ -1,36 +1,5 @@
 # Palworld-Modded-Server-Linux
-This tutorial will guide you through the process of setting up a modded Palworld server on a Linux system using Wine.d
-
-> [!IMPORTANT]
-> You must have wine installed. Follow the tutorial at https://wiki.winehq.org/Download for your specific distro.
-> I also recommend winetricks for this tutorial. (After you have installed wine)
-
-Winetricks installation for various distros:
-
-- **Ubuntu/Debian**:
-```bash
-  sudo apt-get update
-```
-```bash
-  sudo apt-get install winetricks
-```
-- **Fedora**:
-```bash
-  sudo dnf update
-```
-```bash 
-  sudo dnf install winetricks
-```
-- **Arch Linux**:
-```bash
-  sudo pacman -Syu
-```
-```bash
-  sudo pacman -S winetricks
-```
-
-# Palworld-Modded-Server-Linux
-This tutorial will guide you through the process of setting up a modded Palworld server on a Linux system using Wine.d
+This tutorial will guide you through the process of setting up a modded Palworld server on a Linux system using Wine
 
 > [!IMPORTANT]
 > You must have wine installed. Follow the tutorial at https://wiki.winehq.org/Download for your specific distro.
