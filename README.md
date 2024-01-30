@@ -121,7 +121,7 @@ wine steamcmd.exe +login anonymous +app_update 2394010 validate +quit
 3. PalServer should now be installed to `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer`
 
 ### 5. Modding the PalServer
-1. Download the winmm.dll file from the [discord](https://cdn.discordapp.com/attachments/1107095082567471114/1200053412126003250/winmm.zip) and the UE4SS modding framework from [UE4SS Github](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v2.5.2) (I personally suggest downloading zDEV-UE4SS_Xinput_v2.5.2.zip)
+1. Download the winmm.dll file from the [discord](https://cdn.discordapp.com/attachments/1107095082567471114/1200053412126003250/winmm.zip) and the UE4SS modding framework from [UE4SS Github](https://github.com/UE4SS-RE/RE-UE4SS/releases/download/experimental/zDEV-UE4SS_v2.5.2-594-gc053439.zip)
 2. Move the extracted files to `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer/Pal/Binaries/Win64`
 3. Navigate into the `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer/Pal/Binaries/Win64` folder and run `wine PalServer-Win64-Test-Cmd.exe'
 4. (Optional) To verify if its working, I suggest setting `GuiConsoleVisible` in `UE4SS-settings.ini` to `1`
