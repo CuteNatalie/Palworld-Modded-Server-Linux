@@ -32,7 +32,33 @@ sudo pacman -S winetricks
 # Tutorial
 ---
 
-### 1. First you must install VC runtime 2015-2022 into your wine prefix or else the server will fail to run
+### 1. Installing winbind
+
+- **Ubuntu/Debian**:
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install winbind
+```
+- **Fedora**:
+```bash
+sudo dnf update
+```
+```bash 
+sudo dnf install samba-winbind
+```
+- **Arch Linux**:
+> [!NOTE]
+> - In Arch Linux, the winbind service is provided by the samba package.
+```bash
+sudo pacman -Syu
+```
+```bash
+sudo pacman -S samba
+```
+
+### 2. You must install VC runtime 2015-2022 into your wine prefix or else the server will fail to run
 
 > [!IMPORTANT]
 > - Only for users who don't have a display hooked up to their server
@@ -57,7 +83,7 @@ wine vc_redist.x64.exe
 Replace `vc_redist.x64.exe` with the name of the file you downloaded.
 4. During the installation, if you are prompted to install the mono package or html package, proceed with the installation. These packages are necessary for some applications to run correctly in Wine.
 
-### 2. Install steamcmd into your wine prefix
+### 3. Install steamcmd into your wine prefix
 
 1. Download the Windows version of SteamCMD from the official [Valve Developer Community](https://developer.valvesoftware.com/wiki/SteamCMD#Windows) page.
 2. Extract the contents of the downloaded zip file.
@@ -80,7 +106,7 @@ Replace `vc_redist.x64.exe` with the name of the file you downloaded.
 >
 > Now, you can run SteamCMD from anywhere by simply typing `steamcmd` in the terminal.
 
-### 3. Setting up Steamcmd and PalServer
+### 4. Setting up Steamcmd and PalServer
 1. Go to /home/(user)/.wine/drive_c/steamcmd and execute the steamcmd command using wine so that it updates and installs the neccisarry files.
 ```bash
 cd /home/(user)/.wine/drive_c/steamcmd
@@ -94,7 +120,7 @@ wine steamcmd.exe +login anonymous +app_update 2394010 validate +quit
 ```
 3. PalServer should now be installed to `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer`
 
-### 4. Modding the PalServer
+### 5. Modding the PalServer
 1. Download the winmm.dll file from the [discord](https://cdn.discordapp.com/attachments/1107095082567471114/1200053412126003250/winmm.zip) and the UE4SS modding framework from [UE4SS Github](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v2.5.2) (I personally suggest downloading zDEV-UE4SS_Xinput_v2.5.2.zip)
 2. Move the extracted files to `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer/Pal/Binaries/Win64`
 3. Navigate into the `/home/(user)/.wine/drive_c/steamcmd/steamapps/common/PalServer/Pal/Binaries/Win64` folder and run `wine PalServer-Win64-Test-Cmd.exe'
